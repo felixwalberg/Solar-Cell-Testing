@@ -8,3 +8,6 @@
     * A few timeseries folders have different file extensions and can't be read by pandas (docx)
 * Can we keep track of progress on a GitHub?
 
+
+### Future Questions
+* How do we connect the previous scanner data and metadata entries to each other?
