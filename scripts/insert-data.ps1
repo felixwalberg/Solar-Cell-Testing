@@ -20,7 +20,6 @@ Invoke-DataverseCommands {
 
     # Create a cell object to hold the value to be entered into the dataverse database.
     $cell = @{
-            # 'cr69a_sampleid' = 'test'
             'cr69a_sampleid' = $cell_name
             'cr69a_elapsedtime' = $elapsed_time
             'cr69a_i_phsuns' = $phsuns
@@ -32,14 +31,6 @@ Invoke-DataverseCommands {
             'cr69a_ff' = $ff
             'cr69a_pce' = $pce
            }
-    # $cellsInDatabase = Get-Records `
-    #     -setName 'cr69a_sampledatas' `
-    #     -query ('({0})/cr69a_sampledatas?$select=cr69a_sampleid &$filter=cr69a_sampleid eq test' `
-    #         -f $matchingSamples)
-    # if($matchingSamples)
-    # {
-    #     Write-Output "Value already exists in dataverse table"
-    # }
    
     # Insert the entry into table with name stored in -setName, with the content stored in -body.
     $cellID = New-Record `
